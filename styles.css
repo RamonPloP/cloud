@@ -2,11 +2,11 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #e8f5e9; /* Verde pastel */
 }
 
 header {
-  background-color: #007bff;
+  background-color: #81c784; /* Verde pastel */
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -44,11 +44,21 @@ input[type="password"] {
   border-radius: 5px;
 }
 
+/* Establece un color constante para los enlaces */
+a {
+  color: #007bff; /* Azul */
+}
+
+/* Establece un color constante para los enlaces que forman parte de un botón */
+a.btn {
+  color: #fff; /* Blanco */
+}
+
 button[type="submit"],
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #81c784; /* Verde pastel */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -58,5 +68,5 @@ button[type="submit"],
 
 button[type="submit"]:hover,
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #66bb6a; /* Verde pastel */
 }
