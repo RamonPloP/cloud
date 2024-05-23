@@ -27,7 +27,15 @@
     while($registro = mysqli_fetch_array($resultado)){
         echo 'Titulo: '.$registro["titulo"];
         echo "<br>";
+        echo 'Autor: '.$registro["autor"];
+        echo "<br>";
+        echo 'Descripcion: '.$registro["año_publicacion"];
+        echo "<br>";
+        echo 'Descripcion: '.$registro["genero"];
+        echo "<br>";
         echo 'Descripcion: '.$registro["desc"];
+        echo "<br>";
+        echo '<a href="cambioslibrosform.php?libro='.$registro["titulo"].'" class="btn">Editar</a>';
         echo "<br>";echo "<br>";
     }
 

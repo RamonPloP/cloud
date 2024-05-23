@@ -117,8 +117,7 @@
         <h2>Opciones de Usuarios</h2>
         <ul class="menu-options">
             <li><a href="altasform.php">Altas</a></li>
-            <li><a href="consultas.php">Consultas</a></li>
-            <li><a href="cambiosform.php">Cambios</a></li>
+            <li><a href="consultas.php">Consultas y cambios</a></li>
         </ul>
     </div>
 
@@ -126,8 +125,7 @@
         <h2>Opciones de Libros</h2>
         <ul class="menu-options">
             <li><a href="altaslibrosform.php">Altas</a></li>
-            <li><a href="consultaslibros.php">Consultas</a></li>
-            <li><a href="cambioslibrosform.php">Cambios</a></li>
+            <li><a href="consultaslibros.php">Consultas y cambios</a></li>
         </ul>
     </div>
 </div>

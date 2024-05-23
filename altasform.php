@@ -77,6 +77,11 @@ document.addEventListener("DOMContentLoaded", function() {
         <input type="password" id="contraseña" name="contraseña" required minlength="6" title="La contraseña debe tener al menos 6 caracteres.">
       </div>
       <button type="submit" class="btn">Agregar Usuario</button>
+      <?php
+        if(isset($_GET['err'])){
+          echo "<h3>La matricula ya está registrada</h3>";
+        }
+      ?>
     </form>
     <a href="index.php" class="btn">Volver al Menú</a>
 </div>

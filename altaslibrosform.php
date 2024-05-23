@@ -91,6 +91,11 @@ document.addEventListener("DOMContentLoaded", function() {
         <input type="text" id="desc" name="desc" required>
       </div>
       <button type="submit" class="btn">Agregar Libro</button>
+      <?php
+        if(isset($_GET['err'])){
+          echo "<h3>El libro con ese titulo ya existe</h3>";
+        }
+      ?>
     </form>
     <a href="index.php" class="btn">Volver al Menú</a>
   </div>
