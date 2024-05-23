@@ -11,6 +11,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Modificar Usuario</title>
 <link rel="stylesheet" href="styles.css">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector("form").addEventListener("submit", function(event) {
+        let valid = true;
+
+        const newTitle = document.getElementById("newtitle");
+        const desc = document.getElementById("desc");
+
+        if (!soloLetras(newTitle.value.trim())) {
+            valid = false;
+            alert("El cambio de título solo puede contener letras y espacios.");
+        }
+
+        if (!soloLetras(desc.value.trim())) {
+            valid = false;
+            alert("El cambio de descripción solo puede contener letras y espacios.");
+        }
+
+        if (!valid) {
+            event.preventDefault();
+        }
+    });
+
+    function soloLetras(texto) {
+        return /^[a-zA-Z\s]+$/.test(texto);
+    }
+});
+</script>
 </head>
 <body>
   <header>
@@ -36,11 +64,11 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="newtitle">Cambio de titulo:</label>
+        <label for="newtitle">Cambio de título:</label>
         <input type="text" id="newtitle" name="newtitle" required>
       </div>
       <div class="form-group">
-        <label for="desc">Cambio de descripcion:</label>
+        <label for="desc">Cambio de descripción:</label>
         <input type="text" id="desc" name="desc" required>
       </div>
       <button type="submit" class="btn">Modificar Libro</button>
