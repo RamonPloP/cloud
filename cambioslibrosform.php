@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <form action=<?php echo "cambioslibros.php?libro='".$_GET["libro"]."'" ?> method="post">
         <div class="form-group">
             <label for="title">Libro a modificar:</label>
-            <input type="text" id="newtitle" name="newtitle" required pattern="[a-zA-Z0-9\s]+" title="El título solo puede contener letras, números y espacios." value=<?php echo "'".$_GET["libro"]."'" ?>>
+            <input disabled type="text" id="newtitle" name="newtitle" required pattern="[a-zA-Z0-9\s]+" title="El título solo puede contener letras, números y espacios." value=<?php echo "'".$_GET["libro"]."'" ?> readonly>
         </div>
         <div class="form-group">
             <label for="newauthor">Nuevo autor:</label>

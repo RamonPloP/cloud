@@ -49,7 +49,7 @@ function validarFormulario() {
     <form action=<?php echo "cambios.php?matricula='".$_GET["matricula"]."'" ?>  method="post" onsubmit="return validarFormulario()">
     <div class="form-group">
         <label for="matricula">Matricula:</label>
-        <input type="text" id="matricula" name="new_matricula" required value=<?php echo "'".$_GET["matricula"]."'" ?> readonly>
+        <input type="text" id="matricula" name="new_matricula" required value=<?php echo "'".$_GET["matricula"]."'" ?> readonly disabled>
       </div>
       <div class="form-group">
         <label for="nombre">Cambio de nombre:</label>
