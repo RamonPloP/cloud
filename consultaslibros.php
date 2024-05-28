@@ -36,6 +36,7 @@
         echo 'Descripcion: '.$registro["desc"];
         echo "<br>";
         echo '<a href="cambioslibrosform.php?libro='.$registro["titulo"].'" class="btn">Editar</a>';
+        echo ' <a href="eliminarlibro.php?libro='.$registro["titulo"].'" class="btn" style="background-color: red;">Eliminar</a>';
         echo "<br>";echo "<br>";
     }
 

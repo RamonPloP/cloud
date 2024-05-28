@@ -25,13 +25,14 @@
     $resultado = mysqli_query($conexion,$query);
 
     while($registro = mysqli_fetch_array($resultado)){
-        echo "Matricula: ".$registro["matricula"];
+        echo "Matrícula: ".$registro["matricula"];
         echo "<br>";
         echo "Nombre: ".$registro["usuario"];
         echo "<br>";
         echo "Apellido: ".$registro["apellido"];
         echo "<br>";
         echo '<a href="cambiosform.php?matricula='.$registro["matricula"].'" class="btn">Editar</a>';
+        echo '<a href="eliminarusuario.php?matricula='.$registro["matricula"].'" class="btn">Eliminar</a>';
         echo "<br>";echo "<br>";
     }
 
