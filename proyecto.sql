@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 28-05-2024 a las 03:47:57
+-- Tiempo de generación: 28-05-2024 a las 03:22:00
 -- Versión del servidor: 8.2.0
 -- Versión de PHP: 8.2.13
 
@@ -41,10 +41,8 @@ CREATE TABLE IF NOT EXISTS `libros` (
 --
 
 INSERT INTO `libros` (`titulo`, `autor`, `año_publicacion`, `genero`, `desc`) VALUES
-('Maze Runner', 'Fulano', 2023, 'biografia', 'Descripcio'),
-('Harry Potter', 'JK Rowling', 1235, 'ciencia-ficcion', 'Descricion'),
-('Carrie', 'Stephen Hawking', 1985, 'no-ficcion', 'Descripcion'),
-('Me Before You', 'Fulano', 2008, 'no-ficcion', 'Me before you como la pelicula');
+('Maze Runner', 'Stephen King', 2023, 'biografia', 'Descripcio'),
+('Harry Potter', 'JK Rowling', 1235, 'ciencia-ficcion', 'Descricion');
 
 -- --------------------------------------------------------
 
@@ -69,9 +67,7 @@ INSERT INTO `usuarios` (`usuario`, `password`, `apellido`, `matricula`) VALUES
 ('Ramon', '$2y$10$sjhwhvrvnZJrjJApPe/bc.WYmGVVd89MhMtAkx6iTJXSArfuFzkfu', 'Reyna', '348411'),
 ('Gabriel', '$2y$10$jqBxsVLhKJJVjxNKXFitqubHaaSADBU/9cAg0YKHtEbdZu3PLOE7q', 'Prieto', '312654'),
 ('Gabriel', '$2y$10$8yZJ6ujTXqt750s35lmkf.BZ/5WvXhLagk2k6wGi5rWnuG1kvHbni', 'Bustillos', '353267'),
-('ArianaGrande', '$2y$10$m5JcN3uNLUG6qnW.iyYGSOhn2Wz2Qvxa/10WS6vu.8eEKK5xBJ466', 'Gameplays', '123456'),
-('Fernanda', '$2y$10$Pam19FH7fyuGtf2fZrF7v.s0hV1IrLJOkDGch9HPrb9x8Pa8kAMhK', 'Arellanes Perez', '909090'),
-('Fernando', '$2y$10$ZxnwT8rDop90D99Tx2xRYennmAhWSxsYltPVi5r2i56gDIQLjANdq', 'Perez', '353256');
+('Ariana                 Grande', '$2y$10$m5JcN3uNLUG6qnW.iyYGSOhn2Wz2Qvxa/10WS6vu.8eEKK5xBJ466', 'Gameplays', '123456');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
