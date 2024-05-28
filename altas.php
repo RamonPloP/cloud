@@ -2,7 +2,8 @@
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $matricula = $_POST["matricula"];
-    $contraseña = $_POST['contraseña'];
+    $contraseña = password_hash($_POST['contraseña'],PASSWORD_DEFAULT);
+
 
     $conexion = mysqli_connect("localhost","root","","proyecto");
 

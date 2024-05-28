@@ -31,13 +31,22 @@ function validarFormulario() {
         return false;
     }
 
-    // Validar que la contraseña tenga al menos 8 caracteres
-    if (contraseña.length < 8) {
+    // Validar que la contraseña tenga al menos 8 caracteres si está activada
+    var contraseñaInput = document.getElementById('contraseña');
+    if (contraseñaInput.disabled === false && contraseña.length < 8) {
         alert('La contraseña debe tener al menos 8 caracteres.');
         return false;
     }
 
     return true;
+}
+
+function toggleContraseña() {
+    var contraseñaInput = document.getElementById('contraseña');
+    contraseñaInput.disabled = !contraseñaInput.disabled;
+    if (contraseñaInput.disabled) {
+        contraseñaInput.value = ''; // Limpiar el campo si se desactiva
+    }
 }
 </script>
 </head>
@@ -47,7 +56,7 @@ function validarFormulario() {
   </header>
   <div class="content">
     <form action=<?php echo "cambios.php?matricula='".$_GET["matricula"]."'" ?>  method="post" onsubmit="return validarFormulario()">
-    <div class="form-group">
+      <div class="form-group">
         <label for="matricula">Matricula:</label>
         <input type="text" id="matricula" name="new_matricula" required value=<?php echo "'".$_GET["matricula"]."'" ?> readonly disabled>
       </div>
@@ -81,17 +90,12 @@ function validarFormulario() {
       </div>
       <div class="form-group">
         <label for="contraseña">Nueva contraseña:</label>
-        <input type="password" id="contraseña" name="contraseña" value=<?php
-            $conexion = mysqli_connect("localhost","root","","proyecto");
-
-            $query = "select * from usuarios where matricula= ".$_GET["matricula"].";";
-            $resultado = mysqli_query($conexion,$query);
-            
-            $registro = mysqli_fetch_array($resultado);
-            echo '"'.$registro["password"].'"';
-
-            mysqli_close($conexion);
-        ?>>
+        <input type="password" id="contraseña" name="contraseña" disabled>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" onchange="toggleContraseña()"> Activar Nueva Contraseña
+        </label>
       </div>
       <button type="submit" class="btn">Modificar Usuario</button>
       <?php 

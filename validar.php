@@ -9,7 +9,7 @@
     $usuario_correcto = $registro["matricula"];
     $password_correcto = $registro["password"];
 
-    if(($_POST['matricula'] == $usuario_correcto) && ($_POST["contraseña"] == $password_correcto)){
+    if(($_POST['matricula'] == $usuario_correcto) && (password_verify($_POST["contraseña"],$password_correcto))){
         setcookie("usuario", $_POST["matricula"],time()+60*15);
         header("Location: index.php");
     }else{
