@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="form-group">
         <label for="genre">Género:</label>
         <select id="genre" name="genre" required>
-            <option value="">Seleccione un género</option>
+            <option value="Sin genero">Seleccione un género</option>
             <option value="ficcion">Ficción</option>
             <option value="no-ficcion">No Ficción</option>
             <option value="misterio">Misterio</option>

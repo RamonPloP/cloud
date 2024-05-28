@@ -63,10 +63,11 @@ document.addEventListener("DOMContentLoaded", function() {
     <h1>Modificar Libro</h1>
 </header>
 <div class="content">
-    <form action=<?php echo "cambioslibros.php?libro='".$_GET["libro"]."'" ?> method="post">
+    <form action="cambioslibros.php?libro=<?php echo urlencode($_GET["libro"]); ?>" method="post">
+
         <div class="form-group">
             <label for="title">Libro a modificar:</label>
-            <input disabled type="text" id="newtitle" name="newtitle" required pattern="[a-zA-Z0-9\s]+" title="El título solo puede contener letras, números y espacios." value=<?php echo "'".$_GET["libro"]."'" ?> readonly>
+            <input disabled type="text" id="title" name="title" required pattern="[a-zA-Z0-9\s]+" title="El título solo puede contener letras, números y espacios." value=<?php echo "'".$_GET["libro"]."'" ?> readonly>
         </div>
         <div class="form-group">
             <label for="newauthor">Nuevo autor:</label>
@@ -120,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 mysqli_close($conexion);
             ?></option>
-                <option value="Ciccion">Ficción</option>
+                <option value="Ficcion">Ficción</option>
                 <option value="No-ficcion">No Ficción</option>
                 <option value="Misterio">Misterio</option>
                 <option value="Biografia">Biografía</option>

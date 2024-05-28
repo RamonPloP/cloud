@@ -22,18 +22,19 @@ document.addEventListener("DOMContentLoaded", function() {
         const matricula = document.getElementById("matricula");
         const contraseña = document.getElementById("contraseña");
 
-        const nombreRegex = /^[a-zA-Z\s]+$/;
-        const apellidoRegex = /^[a-zA-Z\s]+$/;
+        const nombreRegex = /^[a-zA-Z]+(?:\s[a-zA-Z]+)*$/;
+        const apellidoRegex = /^[a-zA-Z]+(?:\s[a-zA-Z]+)*$/;
+
         const matriculaRegex = /^\d+$/;
 
         if (!nombreRegex.test(nombre.value)) {
             valid = false;
-            alert("El nombre solo puede contener letras y espacios.");
+            alert("El nombre solo puede contener letras y un espacio entre palabras.");
         }
 
         if (!apellidoRegex.test(apellido.value)) {
             valid = false;
-            alert("El apellido solo puede contener letras y espacios.");
+            alert("El apellido solo puede contener letras y un espacio entre palabras.");
         }
 
         if (!matriculaRegex.test(matricula.value)) {
@@ -51,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
 </script>
 </head>
 <body>
